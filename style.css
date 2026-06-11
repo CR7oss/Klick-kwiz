@@ -1,0 +1,173 @@
+﻿/* Cores do site: aqui você define as cores que serão usadas em todo o site */
+:root {
+    --bg: #07133d;
+    --text: #ffffff;
+    --primary: #2d8cff;
+    --secondary: #ff9f1c;
+    --surface: #10235c;
+    --muted: #cfd8ff;
+}
+
+/* O * significa que a regra vale para todos os elementos da página. Aqui tiramos as margens e o espaçamento padrão do navegador. */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Configuração geral do corpo da página: fonte, cor e fundo. */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+/* Faz com que as imagens nunca fiquem maiores que a área disponível. */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Links sem sublinhado e com a mesma cor do texto, para ficar mais limpo. */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Cabeçalho do site: fundo branco e sombra leve para separar do conteúdo. */
+.site-header {
+    background-color: var(--surface);
+    padding: 16px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.25);
+}
+
+/* Organiza o conteúdo do cabeçalho em linha, com espaçamento. */
+.header-wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* Marca do site com logo e nome. */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Tamanho e estilo da imagem do logo. */
+.brand .logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 12px;
+    object-fit: contain;
+    background: white;
+    padding: 4px;
+}
+
+/* Navegação do menu principal. */
+.main-nav {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* Cada link do menu fica mais forte para ser fácil de ver. */
+.main-nav a {
+    font-weight: 600;
+}
+
+/* Espaço principal da página, com título e descrição. */
+.hero {
+    max-width: 1100px;
+    margin: 32px auto;
+    padding: 0 16px;
+}
+
+/* Espaço entre os itens do bloco principal. */
+.hero-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Título grande da página. */
+.hero h1 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+}
+
+/* Texto explicativo mais claro e fácil de ler. */
+.hero-copy p {
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+/* Botões na mesma linha, com espaço entre eles. */
+.hero-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* Estilo básico para todos os botões. */
+.button {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 999px;
+    font-weight: 700;
+}
+
+/* Botão principal com cor de destaque. */
+.primary {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* Botão secundário com borda simples. */
+.secondary {
+    background-color:var(--primary);
+    color: var(--text);
+    border: 1px solid #d1d1d1;
+}
+
+/* Seção de cartões de recurso, abaixo do cabeçalho. */
+.features {
+    max-width: 1100px;
+    margin: 24px auto 40px;
+    padding: 0 16px;
+    display: grid;
+    gap: 16px;
+}
+
+/* Cada cartão branco com borda redonda e sombra leve. */
+.feature-card {
+    background-color:var(--primary);
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
+    border: #f4f5f9;
+}
+
+/* Rodapé simples com fundo branco e texto centralizado. */
+.site-footer {
+    background-color: var(--bg);
+    text-align: center;
+    padding: 18px 16px;
+    color: var(--muted);
+    border-top: 5px solid; 
+}
+
+/* Ajuste para telas pequenas: deixa o conteúdo com mais espaço nas laterais. */
+@media (max-width: 720px) {
+    .header-wrap,
+    .hero,
+    .features {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
