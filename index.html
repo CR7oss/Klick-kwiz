@@ -90,7 +90,73 @@
         </section>
 
     </main>
+        <!-- =====================================================
+     MODAL DO QUIZ DE PRIMEIRO ACESSO
+     ===================================================== -->
 
+<div id="quizModal" class="quiz-modal">
+
+    <div class="quiz-container" id="quizConteudo">
+
+        <h2>🎓 Bem-vindo ao Klick Kwiz!</h2>
+
+        <p class="quiz-intro">
+            Antes de começar, responda nosso mini desafio
+            com 4 questões de Humanas e descubra seu nível
+            de conhecimento.
+        </p>
+
+        <!-- Barra de progresso -->
+        <div class="barra-progresso">
+            <div id="barra" class="barra"></div>
+        </div>
+
+        <!-- Número da pergunta -->
+        <h3 id="numeroPergunta">
+            Pergunta 1 de 4
+        </h3>
+        
+        <!--textoApoio-->
+        <div id="textoApoio" class="texto-apoio"></div>
+        
+        <!-- Texto da pergunta -->
+        <div id="textoPergunta" class="texto-pergunta">
+        </div>
+
+        <!-- Alternativas -->
+        <div id="alternativas" class="alternativas">
+        </div>
+
+        <!-- Feedback -->
+        <div id="feedback" class="feedback">
+        </div>
+
+        <!-- Explicação -->
+        <div id="explicacao" class="explicacao">
+        </div>
+
+        <!-- Botão próxima -->
+        <button
+            id="proximo"
+            class="botao-proximo"
+            onclick="proximaPergunta()"
+            style="display:none;">
+
+            Próxima Pergunta
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- =====================================================
+     JAVASCRIPT DO QUIZ
+     ===================================================== -->
+
+<script src="js/quiz.js"></script>
+
+</body>
     <footer class="site-footer">
         <p>© 2026 Klick Kwiz • Estude, pratique e evolua.</p>
     </footer>
